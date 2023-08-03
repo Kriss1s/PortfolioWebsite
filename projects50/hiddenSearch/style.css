@@ -1,0 +1,47 @@
+body{
+    background-image: linear-gradient(90deg, #ff5ffa, #5a58e2);;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+.search{
+    height: 2.5rem;
+    transition: width 1s ease;
+    display: flex;
+}
+
+input, .btn{
+    border: 0;
+}
+input{
+    width: 0;
+    padding: 0;
+    transition: all .6s ease;
+    transition-property: width, padding-left;
+}
+
+
+input:focus{
+    outline: none;
+}
+.active input{
+    
+    padding-left: 1rem;
+    width: 12.5rem; 
+    
+}
+
+.btn{
+    font-size: 18px;
+    font-weight: bold;
+    background-color: white;
+    width: 2.5rem;
+    color: #0f0e3c;
+    cursor: pointer;
+}
+
