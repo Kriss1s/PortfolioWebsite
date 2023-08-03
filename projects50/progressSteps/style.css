@@ -1,0 +1,96 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 5%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.steps {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+}
+
+.step {
+    border: 3px solid rgb(199, 191, 191);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.steps::before {
+    content: '';
+    background-color: rgb(199, 191, 191);
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    z-index: -1;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.progress {
+    background-color: rgb(200, 15, 73);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 0%;
+    z-index: -1;
+    transition: 0.4s ease;
+}
+
+.active {
+    border-color: rgb(200, 15, 73);
+    color: rgb(200, 15, 73);
+}
+
+.buttons {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-evenly;
+    width: 25%;
+}
+
+.btn {
+    width: 5rem;
+    padding: 0.5rem 0;
+    background-color: rgb(200, 15, 73);
+    border: 1px solid rgb(200, 15, 73);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background-color: white;
+    color: rgb(200, 15, 73);
+}
+
+.disabled {
+    cursor: not-allowed;
+    background-color: rgb(199, 191, 191);
+    border: 1px solid rgb(199, 191, 191);
+}
+
+.disabled:hover {
+    color: white;
+    background-color: rgb(199, 191, 191);
+    border: 1px solid rgb(199, 191, 191);
+}

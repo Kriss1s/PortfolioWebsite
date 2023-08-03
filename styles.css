@@ -1,0 +1,25 @@
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    background-color: #df6060;
+    border: 1px solid #df6060;
+    color: #fff;
+    width: 20%;
+    margin-top: .5em;
+    padding: 0.8em 0;
+    border-radius: 7px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    transition: .5s;
+    background-color: #ffffff;
+    color: #df6060;
+}

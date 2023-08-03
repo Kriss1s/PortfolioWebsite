@@ -1,0 +1,135 @@
+body {
+
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: white;
+    position: absolute;
+    transform-origin: top left;
+    transition: transform 1s;
+    padding: 3rem 10rem;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+}
+
+
+
+.rotate {
+    transform: rotate(-20deg);
+
+    .circle {
+        transform: rotate(-70deg);
+    }
+
+    /* .content {
+        transform: rotate(-20deg);
+    } */
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: -5rem;
+    left: -5rem;
+    background-color: rgb(240, 70, 127);
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    transition: transform 0.6s;
+    /* z-index: 99; */
+}
+
+
+.circle button {
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(41, 40, 40);
+    color: white;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: -1;
+
+    /* align-items: flex-end; */
+}
+
+nav ul {
+    list-style-type: none;
+    position: relative;
+    left: -20%;
+    /* transform: translateX(-20%); */
+    transition: left 1s linear;
+    padding-bottom: 2.5rem;
+
+}
+
+nav li {
+    margin-bottom: 2rem;
+    margin-left: 10px;
+    transition: margin-left 0.5s linear;
+}
+
+nav li a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    margin-left: 0.5rem;
+}
+
+.rotate+nav ul {
+    left: 0;
+    /* transition: left 1s linear; */
+}
+
+.rotate+nav li {
+    /* transition: margin-left 1s linear; */
+    transition-delay: 0.5s;
+}
+
+.rotate+nav .icon2 {
+    margin-left: 30px;
+}
+
+.rotate+nav .icon3 {
+    margin-left: 50px;
+}
+
+#open {
+    bottom: 20%;
+    right: 20%;
+}
+
+#close {
+    bottom: 20%;
+    left: 20%;
+}
+
+.image {
+    width: 100%;
+    aspect-ratio: 5/3;
+    background-position: center;
+    background-size: cover;
+    background-image: url('./matt-duncan-IUY_3DvM__w-unsplash.jpg');
+}
